@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class MyArray{
 
-    private int[] nums;
-    private int[] ascendentes;
-    private int[] descendentes;
+    public static int[] nums;
+    public static int[] ascendentes;
+    public static int[] descendentes;
 
     public void Ingresar (int cantidad){
         
@@ -27,24 +27,28 @@ public class MyArray{
         this.SortDesc();
         
     }
-    
-    public void Mostrar(){
+    public static void Show(int[] nums_){
+
+
+        for(int n : nums_){
+            Main.println("Elemento: " + n);
+        }
+
+    }
+    public static void Mostrar(){
         
         
         Main.println("\nIngresados:");
-        for(int n : this.nums){
-            Main.println("Elemento: " + n);
-        }
+        Show(nums);
+        
         
         Main.println("\nAscendentes:" );
-        for(int n : this.ascendentes){
-            Main.println("Elemento: " + n);
-        }
+        Show(ascendentes);
+        
         
         Main.println("\nDescendentes:" );
-        for(int n : this.descendentes){
-            Main.println("Elemento: " + n);
-        }
+        Show(descendentes);
+        
 
     }
     
